@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_Final_Examination.View.ShowHomePage">
+    <ContentPage.Content>
+        <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Path Fill="#FFCD9E" Stroke="#FFCD9E" Aspect="Fill" 
+                  Data="m38.87254,69.38501l504.99994,0l1,323.40656c-332.98186,-196.55114 -244.43857,11.67036 -505.99994,-35.18446l0,-288.2221z"  />
+
+            <Image Source="furrytlogo.png" 
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   RelativeLayout.YConstraint="30"
+                   RelativeLayout.XConstraint="90" 
+                   RelativeLayout.WidthConstraint="200"
+                   RelativeLayout.HeightConstraint="200"    
+                   />
+
+            <Label Text="Furry Tails Animal Information Center" 
+                   FontFamily="IGR"
+                   FontSize="40" 
+                   FontAttributes="Bold" 
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand"
+                   RelativeLayout.YConstraint="360"/>
+
+            <Label Text="We present to you the local animals available at our center." 
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand"
+                   RelativeLayout.YConstraint="480"/>
+
+            <Button Text="Animal Table" 
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   BackgroundColor="#BC6C25"
+                   TextColor="#FFEEBB" 
+                   CornerRadius="10" 
+                   HeightRequest="60" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="EndAndExpand"
+                   Clicked="ToTableClicked"
+                   RelativeLayout.YConstraint="650"
+                   RelativeLayout.XConstraint="120"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_Final_Examination.View.PopUpPage">
+    <Frame x:Name="popupFrame"
+           Padding="20"
+           BackgroundColor="White"
+           CornerRadius="10"
+           HasShadow="true"
+           HorizontalOptions="Center"
+           VerticalOptions="Center">
+        <StackLayout>
+            <Image x:Name="imagePicture" WidthRequest="150" HeightRequest="150" Aspect="AspectFit"/>
+            <Button x:Name="updateButton"
+                    Text="Update"
+                    BackgroundColor="#BC6C25"
+                    TextColor="White"
+                    Clicked="UpdateButton_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,5" />
+            <Button x:Name="deleteButton"
+                    BackgroundColor="#E74646"
+                    TextColor="White"
+                    Text="Delete"
+                    Clicked="DeleteButton_Clicked"
+                    HorizontalOptions="FillAndExpand" 
+                    Margin="0,10"/>
+            <Button x:Name="cancelButton"
+                    Text="Cancel"
+                    BackgroundColor="#BC6C25"
+                    TextColor="White"
+                    Clicked="CancelButton_Clicked"
+                    HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </Frame>
+</ContentPage>

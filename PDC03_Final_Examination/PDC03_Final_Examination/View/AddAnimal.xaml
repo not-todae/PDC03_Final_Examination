@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_Final_Examination.View.AddAnimal">
+    <ContentPage.Content>
+        <RelativeLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            <Path Fill="#FFCD9E" Stroke="#FFCD9E" Aspect="Fill" 
+                  Data="m38.87254,69.38501l504.99994,0l1,323.40656c-332.98186,-196.55114 -244.43857,11.67036 -505.99994,-35.18446l0,-288.2221z"  />
+
+            <Image Source="furrytlogo.png" 
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   RelativeLayout.YConstraint="30"
+                   RelativeLayout.XConstraint="90" 
+                   RelativeLayout.WidthConstraint="200"
+                   RelativeLayout.HeightConstraint="200"    
+                   />
+            <Label Text="Add / Update Animals" TextColor="#463f43" FontAttributes="Bold" FontSize="Large" RelativeLayout.XConstraint="90" RelativeLayout.YConstraint="260"></Label>
+            <Entry x:Name="txtCode" Placeholder="Enter Animal Code" PlaceholderColor="#847560" TextColor="black" RelativeLayout.XConstraint="20" RelativeLayout.YConstraint="320" RelativeLayout.WidthConstraint="340"/>
+            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics" PlaceholderColor="#847560" TextColor="black" RelativeLayout.XConstraint="20" RelativeLayout.YConstraint="370" RelativeLayout.WidthConstraint="340"/>
+            <Entry x:Name="txtSpecies" Placeholder="Enter Species" PlaceholderColor="#847560" TextColor="black" RelativeLayout.XConstraint="20" RelativeLayout.YConstraint="420" RelativeLayout.WidthConstraint="340"/>
+            <Entry x:Name="txtHabitat" Placeholder="Enter Habitat" PlaceholderColor="#847560" TextColor="black" RelativeLayout.XConstraint="20" RelativeLayout.YConstraint="470" RelativeLayout.WidthConstraint="340"/>
+            <Picker x:Name="pckThreat" RelativeLayout.XConstraint="20" Title="Select Threat Level" TitleColor="#847560" TextColor="black" RelativeLayout.YConstraint="520" RelativeLayout.WidthConstraint="340">
+                <Picker.Items>
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                    <x:String>3</x:String>
+                    <x:String>4</x:String>
+                    <x:String>5</x:String>
+                    <x:String>6</x:String>
+                    <x:String>7</x:String>
+                    <x:String>8</x:String>
+                    <x:String>9</x:String>
+                    <x:String>10</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Upload Image" Clicked="UploadImage_Clicked" BackgroundColor="#BC6C25" TextColor="#FFEEBB" CornerRadius="10" HeightRequest="55" Margin="0,10,0,10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="16" RelativeLayout.YConstraint="620" RelativeLayout.XConstraint="25" />
+            <Button 
+                BackgroundColor="#BC6C25" 
+                TextColor="#FFEEBB" 
+                CornerRadius="10" 
+                HeightRequest="55"
+                WidthRequest="160"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                
+                x:Name="btnSaveUpdate" 
+                Text="Save" 
+                Clicked="btnSaveUpdate_Clicked" 
+                
+                RelativeLayout.XConstraint="200"
+                RelativeLayout.YConstraint="630"/>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

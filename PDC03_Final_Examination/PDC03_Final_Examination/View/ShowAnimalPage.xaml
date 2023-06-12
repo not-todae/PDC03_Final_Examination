@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_Final_Examination.View.ShowAnimalPage">
+    <ContentPage.Content>
+        <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Path Fill="#FFCD9E" Stroke="#FFCD9E" Aspect="Fill" 
+                  Data="m38.87254,69.38501l504.99994,0l1,323.40656c-332.98186,-196.55114 -244.43857,11.67036 -505.99994,-35.18446l0,-288.2221z"  />
+
+            <Image Source="furrytlogo.png" 
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   RelativeLayout.YConstraint="30"
+                   RelativeLayout.XConstraint="90" 
+                   RelativeLayout.WidthConstraint="200"
+                   RelativeLayout.HeightConstraint="200"    
+                   />
+
+            <Button  
+                        
+                BackgroundColor="#BC6C25" 
+                TextColor="#FFEEBB" 
+                FontAttributes="Bold"
+                CornerRadius="10" 
+                HeightRequest="55"
+                WidthRequest="160"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+               
+                Text="Add New Record" 
+                x:Name="btnAddRecord" 
+                Clicked="btnAddRecord_Clicked" 
+                
+                RelativeLayout.YConstraint="260"
+                RelativeLayout.XConstraint="115"/>
+            <Frame Grid.ColumnSpan="5" CornerRadius="10" BackgroundColor="#588b76" RelativeLayout.YConstraint="360" RelativeLayout.XConstraint="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Animal Code" TextColor="#FFEEBB" FontAttributes="Bold" HorizontalTextAlignment="Center"  Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Characteristics" TextColor="#FFEEBB" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="Species" TextColor="#FFEEBB" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" />
+                    <Label Text="Habitat" TextColor="#FFEEBB" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3"/>
+                    <Label Text="Threat" TextColor="#FFEEBB" FontAttributes="Bold" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="4"/>
+                </Grid>
+            </Frame>
+            <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemSelected"  RelativeLayout.YConstraint="425" Margin="0,2,0,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#C19A6B">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Code}" TextColor="#FFFFFF" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding Characteristics}" TextColor="#FFFFFF" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                                    <Label Text="{Binding Species}" TextColor="#FFFFFF" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" />
+                                    <Label Text="{Binding Habitat}" TextColor="#FFFFFF" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="3" />
+                                    <Label Text="{Binding Threat}"  TextColor="#FFFFFF" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="4" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
